@@ -1,0 +1,34 @@
+name: Format change proposal
+description: Propose a new block type, attribute or keyword. These change the spec, so they get extra review.
+labels: [spec]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        VIS is written by language models, so every addition has a cost: more to learn, more ways to be wrong.
+        A good proposal shows what an agent would write, why existing blocks can't express it, and how the validator would catch mistakes.
+  - type: textarea
+    id: example
+    attributes:
+      label: What the agent would write
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why existing blocks are not enough
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: Likely mistakes and the error messages that would fix them
+      description: List two or three wrong versions an LLM might write and what `vis check` should say.
+    validations:
+      required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: How it renders in each output
+      description: HTML, PNG for phones, plain text, and WhatsApp (image, poll or text).

@@ -1,0 +1,47 @@
+name: Bug report
+description: Something renders wrong, a valid block is rejected, or the CLI fails.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time. The fastest bugs to fix come with the smallest Markdown that reproduces them.
+  - type: textarea
+    id: input
+    attributes:
+      label: Minimal VIS Markdown
+      description: Paste the smallest document that shows the problem. Use made-up data.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or API call
+      placeholder: node bin/vis.mjs render example.md --to png --theme light -o out.png
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected and what happened
+      description: Attach a screenshot or the PNG if it is a rendering issue.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: VIS version
+      placeholder: output of `vis --version`
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Node version, OS and browser (for PNG)
+      placeholder: Node 22.12, macOS 15, Chrome 142
+  - type: dropdown
+    id: output
+    attributes:
+      label: Output affected
+      multiple: true
+      options: [check, html, svg, png, text, whatsapp, web client, widget hook]

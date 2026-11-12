@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [22, 24, 26]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ matrix.node }}
+
+      # Ubuntu 24.04 blocks the unprivileged user namespaces Chrome's sandbox needs.
+      - name: Allow the Chrome sandbox (Linux)
+        if: runner.os == 'Linux'
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
+      - name: Point VIS at the runner's Chrome
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = "macOS" ]; then
+            echo "VIS_CHROME=/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" >> "$GITHUB_ENV"
+          else
+            echo "VIS_CHROME=$(command -v google-chrome || command -v chromium)" >> "$GITHUB_ENV"
+          fi
+
+      - name: Verify vendored engines
+        run: npm run verify-vendor
+
+      - name: Test
+        run: npm test
+
+      - name: Smoke test the CLI
+        run: |
+          node bin/vis.mjs --version
+          node bin/vis.mjs check examples/demo.md
+          node bin/vis.mjs render examples/demo.md --to text -o "$RUNNER_TEMP/demo.txt"
+          node bin/vis.mjs render examples/demo.md --to png --theme light -o "$RUNNER_TEMP/demo.png"
+
+      - name: Build the web client
+        run: npm run build:web
+
+  package:
+    name: Package contents
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: npm pack (dry run)
+        run: npm pack --dry-run

@@ -1,0 +1,76 @@
+{
+  "name": "@casiangel333/vis",
+  "version": "0.2.0",
+  "description": "Visual blocks for AI agents' Markdown: charts, KPI cards, timelines, comparisons and decisions, validated with fix-it errors and rendered to HTML, SVG, PNG, plain text and WhatsApp.",
+  "keywords": [
+    "markdown",
+    "llm",
+    "ai-agents",
+    "charts",
+    "kpi",
+    "vega-lite",
+    "whatsapp",
+    "generative-ui",
+    "data-visualization",
+    "cli"
+  ],
+  "homepage": "https://github.com/casiangel333/vis#readme",
+  "bugs": {
+    "url": "https://github.com/casiangel333/vis/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casiangel333/vis.git"
+  },
+  "license": "MIT",
+  "author": "casiangel333",
+  "type": "commonjs",
+  "main": "vis.js",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./vis.js",
+      "default": "./vis.js"
+    },
+    "./whatsapp": "./adapters/whatsapp.mjs",
+    "./browser": "./lib/browser.mjs",
+    "./engines": "./lib/engines.mjs",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "vis": "bin/vis.mjs",
+    "vis-md": "bin/vis.mjs"
+  },
+  "files": [
+    "vis.js",
+    "index.mjs",
+    "bin/",
+    "lib/",
+    "adapters/",
+    "clients/web/build.mjs",
+    "clients/web/vis-client.js",
+    "vendor/",
+    "licenses/",
+    "examples/",
+    "docs/SPEC.md",
+    "docs/AGENT_PROMPT.md",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "mermaid": ">=11"
+  },
+  "peerDependenciesMeta": {
+    "mermaid": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "verify-vendor": "node scripts/verify-vendor.mjs",
+    "build:web": "node clients/web/build.mjs"
+  }
+}
