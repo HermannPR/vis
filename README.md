@@ -44,6 +44,35 @@ Phone,80
 - **Checked, not just drawn.** `vis audit` renders in a real browser, in light and dark, and reports overlaps, overflow, low contrast and KPI values that don't match the source.
 - **Small and self-contained.** One JavaScript file with no runtime dependencies. Charts are drawn by Vega-Lite, which ships in the package.
 
+## Gallery
+
+Ten everyday documents an agent could write, each drawn by `vis render --to png` at phone width. Click an image to see its source.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/en/coach.md"><img alt="Marathon training: KPI cards, weekly distance and the plan so far" src="docs/assets/gallery/en/coach.png" width="360"></a><br><b>Marathon training</b><br>KPI cards, weekly distance and the plan so far</td>
+<td width="50%" valign="top"><a href="docs/gallery/en/budget.md"><img alt="Monthly budget: Where the money went, September vs October, and one decision" src="docs/assets/gallery/en/budget.png" width="360"></a><br><b>Monthly budget</b><br>Where the money went, September vs October, and one decision</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/en/incident.md"><img alt="Incident report: Latency spike, impact and a minute-by-minute timeline" src="docs/assets/gallery/en/incident.png" width="360"></a><br><b>Incident report</b><br>Latency spike, impact and a minute-by-minute timeline</td>
+<td width="50%" valign="top"><a href="docs/gallery/en/abtest.md"><img alt="A/B test readout: Before/after with the winner highlighted, and the call to make" src="docs/assets/gallery/en/abtest.png" width="360"></a><br><b>A/B test readout</b><br>Before/after with the winner highlighted, and the call to make</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/en/trip.md"><img alt="Trip planning: A long weekend decided in one form, with the cost per person" src="docs/assets/gallery/en/trip.png" width="360"></a><br><b>Trip planning</b><br>A long weekend decided in one form, with the cost per person</td>
+<td width="50%" valign="top"><a href="docs/gallery/en/study.md"><img alt="Learning a language: Streak, vocabulary growth and course progress" src="docs/assets/gallery/en/study.png" width="360"></a><br><b>Learning a language</b><br>Streak, vocabulary growth and course progress</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/en/restaurant.md"><img alt="Restaurant service: Friday night covers by hour and best sellers" src="docs/assets/gallery/en/restaurant.png" width="360"></a><br><b>Restaurant service</b><br>Friday night covers by hour and best sellers</td>
+<td width="50%" valign="top"><a href="docs/gallery/en/garden.md"><img alt="Greenhouse sensors: Readings, soil moisture by bed and the jobs ahead" src="docs/assets/gallery/en/garden.png" width="360"></a><br><b>Greenhouse sensors</b><br>Readings, soil moisture by bed and the jobs ahead</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/en/launch.md"><img alt="Product launch: Milestones with late and blocked items, and open decisions" src="docs/assets/gallery/en/launch.png" width="360"></a><br><b>Product launch</b><br>Milestones with late and blocked items, and open decisions</td>
+<td width="50%" valign="top"><a href="docs/gallery/en/marketing.md"><img alt="Campaign analysis: Ad spend against signups, and signups by channel" src="docs/assets/gallery/en/marketing.png" width="360"></a><br><b>Campaign analysis</b><br>Ad spend against signups, and signups by channel</td>
+</tr>
+</table>
+
+Redraw them all with `npm run gallery`.
+
 ## Quick start
 
 Requires Node.js 22 or newer. PNG, `audit` and `whatsapp` also need Chrome, Chromium or Brave.
@@ -185,4 +214,4 @@ Bug reports, examples and new languages are very welcome. Start with [CONTRIBUTI
 
 ## License
 
-[MIT](LICENSE). VIS ships Vega, Vega-Lite and the Inter font under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Chart palettes are based on ColorBrewer and Okabe-Ito.
+[MIT](LICENSE) © 2026 casiangel333 (HermannPR). VIS ships Vega, Vega-Lite and the Inter font under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Chart palettes are based on ColorBrewer and Okabe-Ito.

@@ -334,3 +334,12 @@ test('vega-lite: specs nested too deep are rejected, and drawing errors become E
   assert.equal(r.errors[0].code, 'E_VEGA');
   assert.match(r.html, /<pre><code>/);
 });
+
+test('grouped bars with value labels keep the largest-first order', async () => {
+  const md = `${F}chart bar "Signups" labels=true\nweek,A,B\nW1,10,12\nW2,30,28\nW3,20,25\n${F}`;
+  assert.equal(chk(md, 'en').ok, true, chk(md, 'en').errors.map(vis.formatError).join(' / '));
+  const spec = vis.chartToVegaLite(vis.parse(md).find(b => b.type === 'chart'), { width: 360 });
+  assert.deepEqual(spec.layer[0].encoding.x.sort, ['W2', 'W3', 'W1']);
+  const svg = await vis.renderSVG(md, Object.assign({ width: 360 }, engines));
+  assert.match(svg, /<svg/);
+});

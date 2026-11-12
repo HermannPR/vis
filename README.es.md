@@ -44,6 +44,35 @@ Teléfono,80
 - **Revisado, no solo dibujado.** `vis audit` dibuja en un navegador real, en claro y en oscuro, y reporta encimados, desbordes, contraste bajo y cifras de indicadores que no coinciden con la fuente.
 - **Chico y completo.** Un solo archivo JavaScript sin dependencias en tiempo de ejecución. Las gráficas las dibuja Vega-Lite, que viene incluido en el paquete.
 
+## Galería
+
+Diez documentos de todos los días que podría escribir un agente, dibujados con `vis render --to png` a ancho de teléfono. Haz clic en una imagen para ver su fuente.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/es/coach.md"><img alt="Entrenamiento de maratón: Tarjetas KPI, distancia por semana y avance del plan" src="docs/assets/gallery/es/coach.png" width="360"></a><br><b>Entrenamiento de maratón</b><br>Tarjetas KPI, distancia por semana y avance del plan</td>
+<td width="50%" valign="top"><a href="docs/gallery/es/budget.md"><img alt="Presupuesto del mes: A dónde se fue el dinero, septiembre contra octubre, y una decisión" src="docs/assets/gallery/es/budget.png" width="360"></a><br><b>Presupuesto del mes</b><br>A dónde se fue el dinero, septiembre contra octubre, y una decisión</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/es/incident.md"><img alt="Reporte de incidente: Pico de latencia, impacto y línea de tiempo minuto a minuto" src="docs/assets/gallery/es/incident.png" width="360"></a><br><b>Reporte de incidente</b><br>Pico de latencia, impacto y línea de tiempo minuto a minuto</td>
+<td width="50%" valign="top"><a href="docs/gallery/es/abtest.md"><img alt="Resultado de prueba A/B: Antes y después con el ganador resaltado, y la decisión" src="docs/assets/gallery/es/abtest.png" width="360"></a><br><b>Resultado de prueba A/B</b><br>Antes y después con el ganador resaltado, y la decisión</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/es/trip.md"><img alt="Plan de viaje: Un fin de semana largo decidido en un formulario, con el costo por persona" src="docs/assets/gallery/es/trip.png" width="360"></a><br><b>Plan de viaje</b><br>Un fin de semana largo decidido en un formulario, con el costo por persona</td>
+<td width="50%" valign="top"><a href="docs/gallery/es/study.md"><img alt="Aprender un idioma: Racha, vocabulario y avance del curso" src="docs/assets/gallery/es/study.png" width="360"></a><br><b>Aprender un idioma</b><br>Racha, vocabulario y avance del curso</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/es/restaurant.md"><img alt="Servicio de restaurante: Comensales por hora del viernes y los platillos más vendidos" src="docs/assets/gallery/es/restaurant.png" width="360"></a><br><b>Servicio de restaurante</b><br>Comensales por hora del viernes y los platillos más vendidos</td>
+<td width="50%" valign="top"><a href="docs/gallery/es/garden.md"><img alt="Sensores del invernadero: Lecturas, humedad del suelo por cama y trabajos pendientes" src="docs/assets/gallery/es/garden.png" width="360"></a><br><b>Sensores del invernadero</b><br>Lecturas, humedad del suelo por cama y trabajos pendientes</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/gallery/es/launch.md"><img alt="Lanzamiento de producto: Hitos con retrasos y bloqueos, y decisiones pendientes" src="docs/assets/gallery/es/launch.png" width="360"></a><br><b>Lanzamiento de producto</b><br>Hitos con retrasos y bloqueos, y decisiones pendientes</td>
+<td width="50%" valign="top"><a href="docs/gallery/es/marketing.md"><img alt="Análisis de campañas: Inversión contra registros, y registros por canal" src="docs/assets/gallery/es/marketing.png" width="360"></a><br><b>Análisis de campañas</b><br>Inversión contra registros, y registros por canal</td>
+</tr>
+</table>
+
+Vuelve a dibujarlas todas con `npm run gallery`.
+
 ## Inicio rápido
 
 Requiere Node.js 22 o más nuevo. PNG, `audit` y `whatsapp` también necesitan Chrome, Chromium o Brave.
@@ -185,4 +214,4 @@ Reportes de errores, ejemplos e idiomas nuevos son muy bienvenidos. Empieza por 
 
 ## Licencia
 
-[MIT](LICENSE). VIS incluye Vega, Vega-Lite y la fuente Inter con sus propias licencias; ver [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Las paletas de las gráficas se basan en ColorBrewer y Okabe-Ito.
+[MIT](LICENSE) © 2026 casiangel333 (HermannPR). VIS incluye Vega, Vega-Lite y la fuente Inter con sus propias licencias; ver [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Las paletas de las gráficas se basan en ColorBrewer y Okabe-Ito.

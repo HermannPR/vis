@@ -56,6 +56,8 @@ jobs:
         run: |
           node bin/vis.mjs --version
           node bin/vis.mjs check examples/demo.md
+          for f in docs/gallery/en/*.md; do node bin/vis.mjs check "$f" --lang en; done
+          for f in docs/gallery/es/*.md; do node bin/vis.mjs check "$f" --lang es; done
           node bin/vis.mjs render examples/demo.md --to text -o "$RUNNER_TEMP/demo.txt"
           node bin/vis.mjs render examples/demo.md --to png --theme light -o "$RUNNER_TEMP/demo.png"
 

@@ -898,7 +898,12 @@
     else yEnc.scale = { nice: true, zero: kind === 'area' || undefined };
     // Bars from largest to smallest when the category is neither a date nor a number (sort=none keeps the data order).
     const order = a.sort || (mark === 'bar' && xType === 'ordinal' && !d.xNum && !d.xDate ? 'desc' : 'none');
-    if (order !== 'none') xEnc.sort = { field: yField, op: 'sum', order: order === 'desc' ? 'descending' : 'ascending' };
+    // The order is computed here, as an explicit list: Vega-Lite drops a "sum" sort when value labels add a second layer.
+    if (order !== 'none') {
+      const tot = new Map();
+      for (const r of d.values) tot.set(r[d.x], (tot.get(r[d.x]) || 0) + d.ys.reduce((t, y) => t + (Number(r[y]) || 0), 0));
+      xEnc.sort = [...tot.keys()].sort((p, q) => order === 'desc' ? tot.get(q) - tot.get(p) : tot.get(p) - tot.get(q));
+    }
     if (mark === 'area') yEnc.stack = (long || d.color) ? (stack || 'zero') : null;
     if (mark === 'bar') yEnc.stack = (long || d.color) ? stack : null;
     enc = { x: xEnc, y: yEnc, tooltip };
@@ -930,6 +935,9 @@
       if (enc.yOffset) txt.encoding.yOffset = enc.yOffset;
       spec.layer = [{ mark: spec.mark, encoding: enc }, txt];
       delete spec.mark;
+      // Vega sizes the canvas with its own text estimate; the drawn font can be a few px larger.
+      // Labels above lines can reach the top edge and the last one the right edge, so leave room there.
+      if (mark === 'line') spec.padding = { top: 10, right: 8, bottom: 4, left: 4 };
       return spec;
     }
     if (mark === 'line' || mark === 'area') return seriesEnds(spec, enc, d, { series, yField, height, long, T });
@@ -958,6 +966,8 @@
       const domain = long ? d.ys : [...new Set(d.values.map(r => String(r[series])))];
       const tone = domain.reduceRight((acc, v, i) => `datum[${S}] === ${JSON.stringify(v)} ? '${T.st[i % T.st.length]}' : ${acc}`, `'${T.text}'`);
       const label = [{ calculate: `datum[${S}] + ' ' + format(datum[${JSON.stringify(yField)}], ',~r')`, as: '_label' }, { calculate: tone, as: '_tone' }];
+      // Same reason as for line labels: the names sit past the last point, at the right edge.
+      spec.padding = { top: 4, right: 12, bottom: 4, left: 4 };
       layers.push({ transform: filter.concat(label), mark: { type: 'text', align: 'left', baseline: 'middle', dx: 7, fontSize: 13, fontWeight: 600 }, encoding: { x: enc.x, y: enc.y, color: { field: '_tone', type: 'nominal', scale: null }, text: { field: '_label', type: 'nominal' } } });
     }
     if (!enc.color) layers[1].mark.color = T.s[0];

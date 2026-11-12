@@ -23,7 +23,7 @@
     "url": "git+https://github.com/HermannPR/vis.git"
   },
   "license": "MIT",
-  "author": "casiangel333",
+  "author": "casiangel333 (HermannPR)",
   "type": "commonjs",
   "main": "vis.js",
   "exports": {
@@ -71,6 +71,7 @@
   "scripts": {
     "test": "node --test test/*.test.mjs",
     "verify-vendor": "node scripts/verify-vendor.mjs",
-    "build:web": "node clients/web/build.mjs"
+    "build:web": "node clients/web/build.mjs",
+    "gallery": "node scripts/gallery.mjs"
   }
 }

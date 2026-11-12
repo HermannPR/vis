@@ -21,6 +21,7 @@ First public release.
 - `C_IMAGE` audit problem for images that don't load.
 - Image paths in `sheet` and `compare` that are URLs are rejected (`E_REMOTE`) unless `allowRemoteData` is set, and `vega-lite` specs with links (`href`) are rejected.
 - `-o -` writes the rendered output to stdout.
+- A gallery of ten use cases in English and Spanish (`docs/gallery/`), drawn by `npm run gallery` and shown in both READMEs.
 
 ### Changed
 - Public API, CLI flags, folders and file names are in English (`adapters/`, `clients/web/`, `examples/`, `lib/browser.mjs`). The Spanish CLI flags (`--ancho`, `--partir`, `--pie corto`, `--theme claro|oscuro`, ...) still work.
@@ -31,6 +32,8 @@ First public release.
 - The headless browser driver talks to Chrome over a pipe instead of a debugging port.
 
 ### Fixed
+- Grouped bar charts with `labels=true` no longer fail with `E_VEGA`: the largest-first order is computed before drawing.
+- Series names at the end of lines and areas, and value labels above lines, no longer get cut at the right or top edge.
 - Numbers that mix separators, and the Unicode minus sign, are read correctly or rejected with a clear fix.
 - Quoted CSV cells with commas and escaped quotes.
 - Fences follow CommonMark: up to three spaces of indent, backticks or tildes, closing fence at least as long.
