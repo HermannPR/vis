@@ -13,7 +13,7 @@ Thanks for helping. VIS is small on purpose, so the bar for new features is "an 
 You need Node.js 22 or newer. PNG output, the `audit` command and the browser tests also need Chrome, Chromium or Brave; set `VIS_CHROME` if VIS can't find it.
 
 ```bash
-git clone https://github.com/casiangel333/vis.git
+git clone https://github.com/HermannPR/vis.git
 cd vis
 npm test
 ```

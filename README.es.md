@@ -2,7 +2,7 @@
 
 **Gráficas y tarjetas que un modelo de lenguaje sabe escribir y que una persona puede leer en cualquier lado.**
 
-[![CI](https://github.com/casiangel333/vis/actions/workflows/ci.yml/badge.svg)](https://github.com/casiangel333/vis/actions/workflows/ci.yml)
+[![CI](https://github.com/HermannPR/vis/actions/workflows/ci.yml/badge.svg)](https://github.com/HermannPR/vis/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/@casiangel333/vis.svg)](https://www.npmjs.com/package/@casiangel333/vis)
 [![Licencia: MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 ![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)
@@ -181,7 +181,7 @@ VIS no busca construir interfaces de apps. Úsalo cuando la respuesta de un agen
 
 ## Contribuir
 
-Reportes de errores, ejemplos e idiomas nuevos son muy bienvenidos. Empieza por [CONTRIBUTING.md](CONTRIBUTING.md) (en inglés); puedes abrir issues en español. Los cambios al formato pasan por una [propuesta de formato](https://github.com/casiangel333/vis/issues/new?template=format_proposal.yml). Todas las personas que participan siguen el [Código de conducta](CODE_OF_CONDUCT.md).
+Reportes de errores, ejemplos e idiomas nuevos son muy bienvenidos. Empieza por [CONTRIBUTING.md](CONTRIBUTING.md) (en inglés); puedes abrir issues en español. Los cambios al formato pasan por una [propuesta de formato](https://github.com/HermannPR/vis/issues/new?template=format_proposal.yml). Todas las personas que participan siguen el [Código de conducta](CODE_OF_CONDUCT.md).
 
 ## Licencia
 

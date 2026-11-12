@@ -27,7 +27,7 @@ This Code of Conduct applies in all project spaces (issues, pull requests, discu
 
 ## Reporting and enforcement
 
-Report unacceptable behavior privately to the maintainer, casiangel333, through the contact listed on the [casiangel333 GitHub profile](https://github.com/casiangel333). All reports are reviewed promptly and fairly, and the reporter's privacy is respected.
+Report unacceptable behavior privately to the maintainer, casiangel333, through a [private report](https://github.com/HermannPR/vis/security/advisories/new) in this repository. All reports are reviewed promptly and fairly, and the reporter's privacy is respected.
 
 Maintainers may take any action they consider appropriate, in proportion to the harm: a private warning, a public warning, a temporary ban, or a permanent ban from the project's spaces.
 

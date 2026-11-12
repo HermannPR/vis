@@ -55,5 +55,5 @@ First public release.
 
 Internal release, not published: parser, validator, HTML/SVG/PNG/text renderers, visual audits in Chromium, WhatsApp adapter, strict-CSP web client and Claude Code widget hook.
 
-[Unreleased]: https://github.com/casiangel333/vis/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/casiangel333/vis/releases/tag/v0.2.0
+[Unreleased]: https://github.com/HermannPR/vis/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/HermannPR/vis/releases/tag/v0.2.0

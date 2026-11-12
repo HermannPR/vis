@@ -2,7 +2,7 @@
 
 **Charts and cards that language models can write, and humans can read anywhere.**
 
-[![CI](https://github.com/casiangel333/vis/actions/workflows/ci.yml/badge.svg)](https://github.com/casiangel333/vis/actions/workflows/ci.yml)
+[![CI](https://github.com/HermannPR/vis/actions/workflows/ci.yml/badge.svg)](https://github.com/HermannPR/vis/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/@casiangel333/vis.svg)](https://www.npmjs.com/package/@casiangel333/vis)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)
@@ -181,7 +181,7 @@ VIS doesn't try to build app UIs. Pick it when an agent's answer has to read wel
 
 ## Contributing
 
-Bug reports, examples and new languages are very welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md). Changes to the format itself go through a [format proposal](https://github.com/casiangel333/vis/issues/new?template=format_proposal.yml). Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
+Bug reports, examples and new languages are very welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md). Changes to the format itself go through a [format proposal](https://github.com/HermannPR/vis/issues/new?template=format_proposal.yml). Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 

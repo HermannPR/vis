@@ -6,7 +6,7 @@ Only the latest release gets security fixes while VIS is in `0.x`.
 
 ## Reporting a vulnerability
 
-Please **don't open a public issue**. Report it privately through GitHub: go to the repository's **Security** tab and choose **Report a vulnerability** ([direct link](https://github.com/casiangel333/vis/security/advisories/new)).
+Please **don't open a public issue**. Report it privately through GitHub: go to the repository's **Security** tab and choose **Report a vulnerability** ([direct link](https://github.com/HermannPR/vis/security/advisories/new)).
 
 Include the Markdown that triggers the problem, the command or API call, and what an attacker could do with it. We aim to reply within 7 days and to ship a fix or mitigation within 30 days for confirmed issues. We'll credit you in the advisory unless you prefer otherwise.
 

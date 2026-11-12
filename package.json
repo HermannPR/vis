@@ -14,13 +14,13 @@
     "data-visualization",
     "cli"
   ],
-  "homepage": "https://github.com/casiangel333/vis#readme",
+  "homepage": "https://github.com/HermannPR/vis#readme",
   "bugs": {
-    "url": "https://github.com/casiangel333/vis/issues"
+    "url": "https://github.com/HermannPR/vis/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/casiangel333/vis.git"
+    "url": "git+https://github.com/HermannPR/vis.git"
   },
   "license": "MIT",
   "author": "casiangel333",
